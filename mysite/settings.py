@@ -13,8 +13,6 @@ import os.path
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-import django_heroku
-
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Quick-start development settings - unsuitable for production
@@ -26,7 +24,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['mesodjangoauthapp.herokuapp.com']
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -130,5 +128,3 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get('EMAIL_LOGIN')
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 
-
-django_heroku.settings(locals())
